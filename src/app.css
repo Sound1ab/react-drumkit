@@ -2,19 +2,22 @@
     color: blue;
 }
 
+.app div {
+    display: inline-block!important;
+}
+
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+
 }
 
 .toDo {
+    display: block;
+    width: 660px;
     background-color: #fbfbfb;
     border: solid 1px lightgray;
     -webkit-border-radius: 25px;
     -moz-border-radius: 25px;
     border-radius: 25px;
-    padding: 40px 120px;
 }
 
 .task {

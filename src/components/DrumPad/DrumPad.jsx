@@ -1,13 +1,9 @@
-import React from 'react';
-
-import Off from './Off.jsx';
-import SoundClip from './SoundClip.jsx';
 import Data from './KeySounds.jsx';
-
-import { parent } from './DrumPad.css';
-
 import EventListener from 'react-event-listener';
-
+import Pad from './Pad.jsx';
+import React from 'react';
+import SoundClip from './SoundClip.jsx';
+import Unsemantic from '../../Unsemantic.css';
 
 export default class DrumPad extends React.Component {
     constructor(props) {
@@ -15,6 +11,7 @@ export default class DrumPad extends React.Component {
         this.state = {
             keys: Data,
             volume: 100,
+            count: [1]
         }
     }
     handleKeydown = (e) => {
@@ -42,14 +39,28 @@ export default class DrumPad extends React.Component {
         let e = {key: keys};
         this.playingStopped(null, 'STOPPED', e);
     }
+    componentWillMount() {
+        const baseCount = [0];
+        setInterval(() => {
+            if(this.state.count[0] === 4){
+                this.setState({
+                    count: baseCount
+                })
+            }
+            this.setState({
+                count: this.state.count.map((value) => {return value + 1;})
+            })
+            console.log(this.state.count);
+        }, 10000)
+    }
     render () {
         const { keys, volume } = this.state;
         return (
-            <div className={parent}>
+            <div>
                 {keys.map((key) => {
                     return (
-                        <div key={key.key}>
-                            <Off keys={key} />
+                        <div className={`${Unsemantic['grid-25']}`} key={key.key}>
+                            <Pad keys={key} count={this.state.count} />
                             <SoundClip url={key.url} status={key.status} volume={volume} keys={key.key} onFinishedPlaying={this.onFinishedPlaying.bind(this)} />
                         </div>
                     )
@@ -58,4 +69,5 @@ export default class DrumPad extends React.Component {
             </div>
         );
     }
+
 }

@@ -1,10 +1,9 @@
-
-
 .drumpad {
     display: inline-block;
     height: 150px;
     width: 150px;
-    background: lightgrey;
+    border: solid 4px;
+    border-color: white;
     border-radius: 5px;
     text-align: left;
     padding: 0px 10px;
@@ -12,10 +11,52 @@
     font-family: sans-serif;
     font-size: -webkit-xxx-large;
     box-sizing: border-box;
-    transition: all 0.5s linear;
+    transition-property: font-size;
+    transition-duration: 4s;
+    transition-delay: 2s;
 }
 
 .drumpad.active {
     background: darkgray;
+    transition: all 0s linear;
+}
+
+.lightblue {
+    border-color:lightblue;
+    transition: all 5s linear;
+}
+
+.lightcoral {
+    border-color:lightcoral;
+    transition: all 5s linear;
+}
+
+.lightcyan {
+    border-color:lightcyan;
+    transition: all 5s linear;
+}
+
+.lightgreen {
+    border-color:lightgreen;
+    transition: all 5s linear;
+}
+
+.lightblue.active {
+    background:lightblue;
+    transition: all 0s linear;
+}
+
+.lightcoral.active {
+    background:lightcoral;
+    transition: all 0s linear;
+}
+
+.lightcyan.active {
+    background:lightcyan;
+    transition: all 0s linear;
+}
+
+.lightgreen.active {
+    background:lightgreen;
     transition: all 0s linear;
 }

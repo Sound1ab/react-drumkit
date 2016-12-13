@@ -7,12 +7,10 @@
 }
 
 .container {
-
+    width: 46%;
 }
 
 .toDo {
-    display: block;
-    width: 660px;
     background-color: #fbfbfb;
     border: solid 1px lightgray;
     -webkit-border-radius: 25px;

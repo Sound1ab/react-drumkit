@@ -1,48 +1,48 @@
 export default [
     {
-        key: 'a',
+        key: 'f',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/1-jordan-guitar-1.wav'
     },
     {
-        key: 's',
+        key: 'd',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/2-felipe-guitar-di-5.wav'
     },
     {
-        key: 'd',
+        key: 's',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/3-bells-2.wav'
     },
     {
-        key: 'f',
+        key: 'a',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/5-bells-3.wav'
     },
     {
-        key: 'z',
+        key: 'v',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/6-bells-6.wav'
     },
     {
-        key: 'x',
+        key: 'c',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/4-bells-4.wav'
     },
     {
-        key: 'c',
+        key: 'x',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/7-kick.wav'
     },
     {
-        key: 'v',
+        key: 'z',
         value: false,
         status: 'STOPPED',
         url: '/public/kit/8-clap.wav'
